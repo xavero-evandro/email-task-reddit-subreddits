@@ -1,0 +1,42 @@
+[
+{
+    "name": "default",
+    "type": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "reddit_notifier",
+    "entities": [
+      "src/models/*.ts"
+    ],
+    "migrations": [
+      "./src/database/migrations/*.ts"
+    ],
+    "cli": {
+      "entitiesDir": "./src/models",
+      "migrationsDir": "./src/database/migrations"
+    },
+    "logging": true,
+    "useNewUrlParser": true,
+    "useUnifiedTopology": true
+  },
+  {
+    "name": "test",
+    "type": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "reddit_notifier_test",
+    "entities": [
+      "src/models/*.ts"
+    ],
+    "migrations": [
+      "./src/database/migrations/*.ts"
+    ],
+    "cli": {
+      "entitiesDir": "./src/models",
+      "migrationsDir": "./src/database/migrations"
+    },
+    "logging": true,
+    "useNewUrlParser": true,
+    "useUnifiedTopology": true
+  }
+]
